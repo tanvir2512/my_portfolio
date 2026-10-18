@@ -179,7 +179,7 @@ export const PROJECTS_DATA = [
     id: 5,
     title: "Ai Powered Precision Agriculture Drone",
     techStack: "Python • IoT • Embedded | Lead Developer",
-    description: "Designed and built an AI-Powered agricultural drone featuring predictive analysis for targeted Fertilizer application. Applied computer vision techniques to extract crop health-related information from aerial imag",
+    description: "Designed and built an AI-Powered agricultural drone featuring predictive analysis for targeted Fertilizer application. Applied computer vision techniques to extract crop health-related information from aerial image",
     image: "/images/projects/drone-project.jpg",
     link: "https://youtu.be/Cfz1S30QrAA?si=-kdHnQ8sBGzBLk0P",
   },
@@ -222,7 +222,7 @@ export const CERTIFICATIONS_DATA = [
     badgeColor: "bg-sky-500/20 text-sky-400 border-sky-400/50",
     link: "#",
   },
-  {
+  /*{
     id: 4,
     title: "Java Programming",
     issuer: "HackerRank",
@@ -230,7 +230,7 @@ export const CERTIFICATIONS_DATA = [
     badgeText: "H",
     badgeColor: "bg-green-500/20 text-green-400 border-green-400/50",
     link: "#",
-  },
+  },*/
   {
     id: 5,
     title: "Web Development (HTML, CSS, JS)",
@@ -264,26 +264,26 @@ export const SERVICES_DATA = [
     description: "Cross-platform apps with Flutter for Android & iOS.",
     iconName: "Smartphone",
   },
-  {
+  /*{
     id: 3,
     title: "UI/UX Design",
     description: "Clean, user-friendly and modern interfaces.",
     iconName: "Palette",
-  },
+  },*/
   {
-    id: 4,
+    id: 3,
     title: "Machine Learning",
     description: "Data analysis, model building and intelligent solutions.",
     iconName: "BrainCircuit",
   },
   {
-    id: 5,
+    id: 4,
     title: "Problem Solving & Automation",
     description: "Scripting, automation and custom tools.",
     iconName: "Wrench",
   },
   {
-    id: 6,
+    id: 5,
     title: "Technical Support & Consultation",
     description: "Guidance on tech, projects and career growth.",
     iconName: "Lightbulb",

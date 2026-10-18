@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
 
 /**
  * Custom Inline SVG Icons for GitHub & LinkedIn
@@ -43,9 +51,8 @@ function LinkedinIcon({ className = "w-4 h-4" }) {
 }
 
 /**
- * 7. CONTACT PAGE ("/contact")
- * Matches Showcase Panel 7: Left column with contact info items, center/right
- * interactive form with validation & success alert, and handwritten note.
+ * 7. CONTACT PAGE ("/contact") - Web3Forms Version
+ * Sends form submissions directly to your Gmail inbox instantly.
  */
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -53,18 +60,51 @@ export default function ContactPage() {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitted(false), 5000);
+    setIsLoading(true);
+    setSubmitted(false);
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "e51a861a-d5c5-4704-88bc-47a68398c012", // <-- PASTE YOUR KEY HERE
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        throw new Error(data.message || "Failed to submit form.");
+      }
+    } catch (err) {
+      setErrorMsg(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -223,18 +263,39 @@ export default function ContactPage() {
               />
             </div>
 
-            <button type="submit" className="neon-btn w-full uppercase text-sm">
-              <span>Send Message</span>
-              <Send className="w-4 h-4" />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="neon-btn w-full uppercase text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {isLoading ? (
+                <>
+                  <span>Sending...</span>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                </>
+              ) : (
+                <>
+                  <span>Send Message</span>
+                  <Send className="w-4 h-4" />
+                </>
+              )}
             </button>
 
-            {/* Success Notification after Form Submission */}
+            {/* Success Notification */}
             {submitted && (
               <div className="flex items-center gap-2 p-3 rounded-lg bg-emerald-500/15 border border-neon-primary text-emerald-700 dark:text-neon-primary text-xs">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
                 <span>
                   Thank you! Your message has been sent successfully.
                 </span>
+              </div>
+            )}
+
+            {/* Error Notification */}
+            {errorMsg && (
+              <div className="flex items-center gap-2 p-3 rounded-lg bg-red-500/15 border border-red-500 text-red-600 dark:text-red-400 text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>{errorMsg}</span>
               </div>
             )}
           </form>
