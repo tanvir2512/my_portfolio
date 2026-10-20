@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+//import Link from "next/link";
 import { SERVICES_DATA } from "@/data/portfolioData";
 import {
   Code2,
@@ -9,6 +9,16 @@ import {
   Wrench,
   Lightbulb,
   ArrowRight,
+} from "lucide-react";
+import Link from "next/link"; // <-- Added Next.js Link import
+import {
+  Download,
+  Mail,
+  MapPin,
+  GraduationCap,
+  //Briefcase,
+  Mouse,
+  User,
 } from "lucide-react";
 
 // Map icon names from portfolioData to Lucide React components
@@ -89,6 +99,15 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
+         <div className="mt-12 flex justify-center">
+              <Link
+                href="/contact"
+                title="Explore Contact"
+                className="p-2 rounded-full border border-emerald-500/40 dark:border-neon-primary/40 text-emerald-600 dark:text-neon-primary animate-bounce hover:shadow-neon"
+              >
+                <Mouse className="w-5 h-5" />
+              </Link>
+            </div>
     </section>
   );
 }
