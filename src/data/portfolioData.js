@@ -8,7 +8,7 @@ export const NAVIGATION_LINKS = [
   { name: "Skills", path: "/skills" },
   { name: "Experience", path: "/experience" },
   { name: "Projects", path: "/projects" },
-  { name: "Certifications", path: "/certifications" },
+ // { name: "Certifications", path: "/certifications" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
 ];
