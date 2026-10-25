@@ -115,7 +115,7 @@ export default function AboutPage() {
                   </p>
                   <p className="text-xs text-gray-400 mt-1">
                     Place photo at:{" "}
-                    <code className="text-neon-primary">/public/images/profile.png</code>
+                    <code className="text-neon-primary">/public/images/profile.webp</code>
                   </p>
                 </div>
               )}

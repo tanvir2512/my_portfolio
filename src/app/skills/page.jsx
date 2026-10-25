@@ -129,7 +129,7 @@ export default function SkillsPage() {
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
                   Optional image path:{""}
-                  <code className="text-neon-primary">/public/images/skills-side.jpg</code>
+                  <code className="text-neon-primary">/public/images/skills-side.webp</code>
                 </p>
               </div>
             )}
