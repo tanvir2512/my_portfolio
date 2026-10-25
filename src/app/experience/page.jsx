@@ -128,7 +128,7 @@ export default function ExperiencePage() {
                 <p className="text-xs text-gray-400 mt-1">
                   Optional image path:{" "}
                   <code className="text-neon-primary">
-                    /public/images/experience-side.jpeg
+                    /public/images/experience-side.webp
                   </code>
                 </p>
               </div>
