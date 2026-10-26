@@ -114,7 +114,7 @@ export default function ExperiencePage() {
           <div className="neon-card p-4 overflow-hidden">
             {!sideImgError ? (
               <img
-                src="/images/experience-side.jpeg"
+                src="/images/experience-side.webp"
                 alt="Experience Workspace"
                 onError={() => setSideImgError(true)}
                 className="w-full h-72 object-cover rounded-lg"
