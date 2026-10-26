@@ -100,7 +100,7 @@ export default function AboutPage() {
               {/* LAYER 4 (TOP): User's Transparent PNG Photo */}
               {!imgError ? (
                 <img
-                  src="/images/profile.png"
+                  src="/images/profile.webp"
                   alt={PERSONAL_INFO.name}
                   onError={() => setImgError(true)}
                   className="relative z-10 w-56 sm:w-64 h-auto max-h-84 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)] transition-transform duration-500 hover:scale-[1.03]"
