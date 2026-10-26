@@ -148,7 +148,7 @@ export const PROJECTS_DATA = [
     title: "Salat Tracker",
     techStack: "Flutter • Mobile App | Solo developed",
     description: "A prayer tracking app with frequent Salat Reminder, Azan, Quran, Qibla, Dhikr and more features. User will get an effective overlay notification on every wakt as Salat reminder, User can access To-Do list, Last 30 days salat record | Overall a practical productive app",
-    image: "/images/projects/salat-tracker.png",
+    image: "/images/projects/salat-tracker.webp",
     link: "#",
   },
   {
@@ -156,7 +156,7 @@ export const PROJECTS_DATA = [
     title: "Yes to Youth Org. Website",
     techStack: "React • Next.js | Solo developed",
     description: "An organizational website which includes dedicated pages for Home, Members can Check donation Information, anyone can see programs, the Executive Committee and Contact details.",
-    image: "/images/projects/yes-to-youth.jpg",
+    image: "/images/projects/yes-to-youth.webp",
     link: "https://yestoyouth.vercel.app/",
   },
   {
@@ -164,7 +164,7 @@ export const PROJECTS_DATA = [
     title: "Tap Music",
     techStack: "Flutter • Mobile App | Solo developed",
     description: "A modern offline music player built with Flutter (Dart), featuring on-device mp3/m4a playback, a custom animated vinyl-record UI, background audio with system notification controls, and full playlist/favorites management",
-    image: "/images/projects/tap-music.png",
+    image: "/images/projects/tap-music.webp",
     link: "#",
   },
   {
@@ -172,7 +172,7 @@ export const PROJECTS_DATA = [
     title: "Portfolio Website",
     techStack: "React • Next.js",
     description: "Personal portfolio website with modern UI/UX and animations.",
-    image: "/images/projects/portfolio.jpg",
+    image: "/images/projects/portfolio.webp",
     link: "#",
   },
   {
@@ -180,7 +180,7 @@ export const PROJECTS_DATA = [
     title: "Ai Powered Precision Agriculture Drone",
     techStack: "Python • IoT • Embedded | Lead Developer",
     description: "Designed and built an AI-Powered agricultural drone featuring predictive analysis for targeted Fertilizer application. Applied computer vision techniques to extract crop health-related information from aerial image",
-    image: "/images/projects/drone-project.jpg",
+    image: "/images/projects/drone-project.webp",
     link: "https://youtu.be/Cfz1S30QrAA?si=-kdHnQ8sBGzBLk0P",
   },
   /*{
