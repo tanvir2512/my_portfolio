@@ -115,7 +115,7 @@ export default function SkillsPage() {
           <div className="neon-card overflow-hidden p-3">
             {!sideImgError ? (
               <img
-                src="/images/skills-side.jpg"
+                src="/images/skills-side.webp"
                 alt="Developer Workspace"
                 onError={() => setSideImgError(true)}
                 className="w-full h-64 object-cover rounded-lg"
